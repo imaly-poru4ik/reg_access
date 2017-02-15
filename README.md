@@ -1,4 +1,4 @@
-**reg_access provides hardware drivers developers a great way to handle hardware registers (e.g. in embedded projects).**
+**reg_access provides hardware drivers developers a great way to handle hardware registers (e.g. in embedded SW projects).**
 
 Author: Igal Maly (poru4ik@gmail.com)
 
@@ -49,20 +49,11 @@ For example `context_id` in the above example is the first (least significant) 1
 ## Usage
 Example from `TestDma_RegAccess()` in  **unit_test_main.c**
 
-Writing to a register:
-`REG(g_pHwRegFileDma->sgl[2].ptr) = 45;`
-
-Reading a register:
-`a = REG(g_pHwRegFileDma->sgl[2].ptr);`
-
-Field setting with a value:
-`REG_FIELD_WR(g_pHwRegFileDma->ctxt.fragment_id, 7);`
-
-Setting a single-bit field to 1:
-`REG_BIT_SET(g_pHwRegFileDma->ctrl.start);`
-
-Reading a field from a register:
-`a = REG_FIELD_GET(g_pHwRegFileDma->sgl[2].len.mem_len);`
+    Writing to a register:           REG(g_pHwRegFileDma->sgl[2].ptr) = 45;
+    Reading a register:              a = REG(g_pHwRegFileDma->sgl[2].ptr);
+    Field setting with a value:      REG_FIELD_WR(g_pHwRegFileDma->ctxt.fragment_id, 7);
+    Setting a single-bit field to 1: REG_BIT_SET(g_pHwRegFileDma->ctrl.start);
+    Reading a field from a register: a = REG_FIELD_GET(g_pHwRegFileDma->sgl[2].len.mem_len);
 
 ## Contents
 * **regfile_access.h**: Macros for accessing registers and fields according to described convention: **This is the reg_access API**
