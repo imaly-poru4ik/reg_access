@@ -77,7 +77,7 @@ If you have **any** comments, ideas for improving this method, or know a differe
 ### What I'm not fully happy about
 1. This approach requires understanding the convention, especially when creating the regfiles description.
   * Although I expect it should be more or less automatic process for most projects.
-2. The need to count the field offset from 1 to not create zero length arrays
+2. The need to count the field offset from 1 to avoid creating zero length arrays
 
 # Embedding in your projects
 I **encourage** anyone to use this method or source code, just provide the credit please.
